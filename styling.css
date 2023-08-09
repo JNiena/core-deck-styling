@@ -1,0 +1,291 @@
+.card {
+	height: 100%;
+	display: -webkit-box;
+	-webkit-box-align: stretch;
+	-webkit-box-pack: center;
+	-webkit-box-orient: vertical;
+	margin: 1;
+	padding: 0;
+	font-family: "Noto Sans CJK JP";
+	text-align: center;
+	background-color: #DEE4E7;
+	font-size: 15px;
+}
+
+.night-mode .card {
+	background-color: #06040D;
+}
+
+.night_mode .card {
+	background-color: #06040D;
+}
+
+#answer {
+	position: relative;
+	top: -1em;
+}
+
+.font-big {
+	font-size: 50px;
+}
+
+.font-medium {
+	font-size: 30px;
+}
+
+.font-small {
+	font-size: 25px;
+}
+
+.font-smaller {
+	font-size: 17px;
+}
+
+.pitch-size {
+	font-size: 25px;
+}
+
+#expression {
+	width: 80%;
+	margin: 1em auto 1em;
+	background-color: #FFCD58;
+	color: #000000;
+	border-radius: 10px;
+	padding: 0.2em 0;
+}
+
+.night-mode #expression {
+	background-color: #009494;
+	color: #FFFFFF;
+}
+
+.night_mode #expression {
+	background-color: #009494;
+	color: #FFFFFF;
+}
+
+#expression a {
+	color: #000000;
+	text-decoration: none;
+}
+
+.night-mode #expression a {
+	color: #FFFFFF;
+}
+
+.night_mode #expression a {
+	color: #FFFFFF;
+}
+
+#expression a:hover {
+	color: #00A0C6;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+#hint {
+	color: #000000;
+}
+
+.night-mode #hint {
+	color: #FFFFFF;
+}
+
+.night_mode #hint {
+	color: #FFFFFF;
+}
+
+#usage {
+	padding: 3% 10%;
+	margin: 1% 5%;
+	color: #000000;
+	background-color: #DEE4E7;
+	border: solid grey;
+	border-radius: 15px;
+}
+
+.night-mode #usage {
+	color: #fff;
+	background-color: #0B0716;
+	border-color: #7F7F7F;
+}
+
+.night_mode #usage {
+	color: #FFFFFF;
+	background-color: #0B0716;
+	border-color: #7F7F7F;
+}
+
+#front a {
+	color: #000000;
+	text-decoration: none;
+}
+
+.night-mode #front a {
+	color: #FFFFFF;
+}
+
+.night_mode #front a {
+	color: #FFFFFF;
+}
+
+#front a:hover {
+	color: #00A0C6;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+img {
+	width: auto;
+	height: auto;
+	max-width: 600px;
+	max-height: 300px;
+}
+
+.NSFW img {
+	filter: blur(30px);
+}
+
+.NSFW img:hover {
+	filter: blur(0px);
+}
+
+.sentence {
+	position: relative;
+	padding: 1em 0;
+	margin: 1% 3% 1% 3%;
+	border-radius: .3em;
+	background-color: #C5D9E3;
+	color: #000000;
+}
+
+.night-mode .sentence {
+	background-color: #1E1E2E;
+	color: #FFFFFF;
+}
+
+.night_mode .sentence {
+	background-color: #1E1E2E;
+	color: #FFFFFF;
+}
+
+.sentence a {
+	color: #000000;
+	text-decoration: none;
+}
+
+.night-mode .sentence a {
+	color: #FFFFFF;
+}
+
+.night_mode .sentence a {
+	color: #FFFFFF;
+}
+
+.sentence a:hover {
+	color: #00A0C6;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+b {
+	font-weight: 500;
+	color: #FF8300;
+}
+
+.night-mode b {
+	font-weight: 500;
+	color: #8A8AFF;
+}
+
+.night_mode b {
+	font-weight: 500;
+	color: #8A8AFF;
+}
+
+#extra {
+	padding: 1% 1%;
+	margin: 1% 30%;
+	color: #000000;
+	background-color: #DEE4E7;
+	border: solid grey;
+	border-radius: 15px;
+}
+
+.night-mode #extra {
+	color: #FFFFFF;
+	background-color: #0B0716;
+	border-color: #7F7F7F;
+}
+
+.night_mode #extra {
+	color: #FFFFFF;
+	background-color: #0B0716;
+	border-color: #7F7F7F;
+}
+
+.replay-button svg path {
+	stroke: #325646;
+	fill: #000000;
+}
+
+.night-mode .replay-button svg path {
+	stroke: #0B0716;
+	fill: #FFFFFF;
+}
+
+.night_mode .replay-button svg path {
+	stroke: #0B0716;
+	fill: #FFFFFF;
+}
+
+.replay-button svg circle {
+	fill: #DEE4E7;
+	stroke: #DEE4E7;
+}
+
+.night-mode .replay-button svg circle {
+	fill: #0B0716;
+	stroke: #0B0716;
+}
+
+.night_mode .replay-button svg circle {
+	fill: #0B0716;
+	stroke: #0B0716;
+}
+
+.replay-button {
+	width: 35px;
+}
+
+@media screen and (orientation:portrait) {
+	.card {
+		font-family: Noto Sans JP Regular;
+	}
+
+	.mobile .night_mode {
+		background-color: #06040D;
+	}
+
+	.mobile .font-big {
+		font-size: 35px;
+	}
+
+	.mobile .font-medium {
+		font-size: 20px;
+	}
+
+	.mobile .font-small {
+		font-size: 16px;
+	}
+
+	.mobile .font-smaller {
+		font-size: 13px;
+	}
+}
+
+@media screen and (orientation:landscape) {
+	.mobile .night_mode {
+		background-color: #06040D;
+	}
+}

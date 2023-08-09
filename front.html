@@ -1,0 +1,68 @@
+<div id="expression">
+	<div class="font-big">
+		<a href="https://jisho.org/search/{{Word}}">{{edit:Word}}</a>
+		<div style="line-height: 15%;">
+			<br>
+		</div>
+	</div>
+</div>
+
+<div id="hintSentence" class="font-small" style="display: none">
+	{{#Sentence}}
+	<br>
+	<br>
+	<div class="sentence">
+		<div class="example_jp">
+			{{edit:Sentence}}
+		</div>
+	</div>
+	{{/Sentence}}
+</div>
+
+<script>
+	(function () {
+		if (document.getElementById("answer")) {
+			return;
+		}
+		const expression = "{{Word}}";
+		const furigana = "{{Reading}}";
+		const kanjiRegex = /[\u4e00-\u9faf]/g;
+		if (!expression.match(kanjiRegex)) {
+			const hintSentence = document.getElementById("hintSentence");
+			hintSentence.style.display = "block";
+			const sentenceElement = document.querySelector("#hintSentence a");
+			highlightWord(sentenceElement, expression, furigana);
+		}
+	})();
+
+	function highlightWord(sentenceElement, expression, furigana) {
+		const sentence = sentenceElement.innerHTML;
+		const href = decodeURIComponent(sentenceElement.getAttribute("href"));
+		sentenceElement.href = href.replace(/<[^>]*>/g, "");
+		if (!sentence.match("<strong>")) {
+			let replace = expression;
+			replace = shorten(replace, sentence, 1);
+			replace = sentence.match(replace) ? replace : shorten(furigana, sentence, 2);
+			replace = sentence.match(replace) ? replace : shorten(hiraganaToKatakana(furigana), sentence, 2);
+			sentenceElement.innerHTML = sentenceElement.innerHTML.replace(new RegExp(replace, "g"), `<strong>${replace}</strong>`);
+		}
+	}
+
+	function shorten(expression, sentence, minLength) {
+		while (expression.length > minLength && !sentence.match(expression)) {
+			expression = expression.substr(0, expression.length - 1);
+		}
+		return expression;
+	}
+
+	function hiraganaToKatakana(hiragana) {
+		return hiragana.replace(/[\u3041-\u3096]/g, function (c) {
+			return String.fromCharCode(c.charCodeAt(0) + 0x60);
+		});
+	}
+
+	var elem = document.querySelector(".soundLink, .replaybutton");
+	if (elem) {
+		elem.click();
+	}
+</script>
